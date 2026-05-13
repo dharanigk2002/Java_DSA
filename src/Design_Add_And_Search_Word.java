@@ -1,32 +1,15 @@
-class Node {
-    Node[] child;
-    boolean end;
+import Trie.Node;
+/*
+Design a data structure that supports adding new words and finding if a string matches any previously added string.
 
-    public Node() {
-        child=new Node[26];
-        end=false;
-    }
+Implement the WordDictionary class:
 
-    public boolean containsKey(char c) {
-        return child[c-97]!=null;
-    }
+WordDictionary() Initializes the object.
+void addWord(word) Adds word to the data structure, it can be matched later.
+bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise.
+word may contain dots '.' where dots can be matched with any letter.
+*/
 
-    public void put(char ch) {
-        child[ch-97]=new Node();
-    }
-
-    public void setEnd() {
-        end=true;
-    }
-
-    public boolean isEnd() {
-        return end;
-    }
-
-    public Node get(char ch) {
-        return child[ch-97];
-    }
-}
 private Node root=null;
 void addWord(String word) {
     Node temp=root;
