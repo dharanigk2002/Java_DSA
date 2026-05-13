@@ -1,5 +1,5 @@
 // Find max xor among array of give numbers
-// Trie + greedy
+// Trie_Ds.Trie + greedy
 // 1^0 = 0^1 = 1
 // To maximize output xor with opposite bits
 class Node {

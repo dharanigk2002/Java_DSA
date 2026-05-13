@@ -1,4 +1,4 @@
-import Trie.Node;
+import Trie_Ds.Trie.Node;
 
 private final Node root=new Node();
 private Boolean[] dp;

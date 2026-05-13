@@ -1,4 +1,4 @@
-package Trie;
+package Trie_Ds.Trie;
 // Prefix tree ds
 public class Node {
     Node[] child;

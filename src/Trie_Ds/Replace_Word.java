@@ -1,4 +1,4 @@
-import Trie.Node;
+import Trie_Ds.Trie.Node;
 /*
 In English, we have a concept called root, which can be followed by some other word to form another longer word - let's call this word derivative.
 For example, when the root "help" is followed by the word "ful", we can form a derivative "helpful".
