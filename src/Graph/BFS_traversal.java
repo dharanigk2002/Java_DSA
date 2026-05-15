@@ -25,6 +25,25 @@ void dfs(List<List<Integer>> adj, int start, boolean[] visited, List<Integer> re
         dfs(adj, neighbour, visited, res);
 }
 
+void dfs2(List<List<Integer>> adj, int start, int V) {
+    Stack<Integer> st=new Stack<>();
+    boolean[] visited=new boolean[V+1];
+    List<Integer> res=new ArrayList<>();
+    st.push(start);
+    visited[start]=true;
+
+    while (!st.isEmpty()) {
+        int node=st.pop();
+        res.add(node);
+        for(int neighbour:adj.get(node))
+            if(!visited[neighbour]) {
+                visited[neighbour]=true;
+                st.push(neighbour);
+            }
+    }
+    IO.println(res);
+}
+
 void main() {
     int V=8;
     List<List<Integer>> adj=new ArrayList<>();
@@ -45,4 +64,6 @@ void main() {
     dfs(adj, 1, visited, res);
     IO.println("DFS traversal:");
     IO.println(res);
+    IO.println("Iterative DFS traversal:");
+    dfs2(adj, 1, V);
 }
