@@ -1,3 +1,9 @@
+/*
+You are given a grid[][] of size n*m, where every element is either 'O' or 'X'. You have to replace all 'O' or a group of 'O' with 'X' that are surrounded by 'X'.
+
+A 'O' (or a set of 'O') is considered to be surrounded by 'X' if there are 'X' at locations just below, just above, just left and just right of it.
+*/
+
 void dfs(char[][] grid, int i, int j, int m, int n) {
     if(i<0 || j<0 || i>=m || j>=n || grid[i][j]!='O')
         return;
