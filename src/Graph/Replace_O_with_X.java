@@ -1,0 +1,42 @@
+void dfs(char[][] grid, int i, int j, int m, int n) {
+    if(i<0 || j<0 || i>=m || j>=n || grid[i][j]!='O')
+        return;
+    grid[i][j]='*';
+    dfs(grid, i+1, j, m, n);
+    dfs(grid, i-1, j, m, n);
+    dfs(grid, i, j+1, m, n);
+    dfs(grid, i, j-1, m, n);
+}
+
+void main() {
+    char[][] grid = {
+            {'X', 'X', 'X', 'X'},
+            {'X', 'O', 'X', 'X'},
+            {'X', 'O', 'O', 'X'},
+            {'X', 'O', 'X', 'X'},
+            {'X', 'X', 'O', 'O'}
+    };
+    int m=grid.length, n=grid[0].length;
+    for(int i=0;i<m;i++) {
+        if(grid[i][0]=='O')
+            dfs(grid, 0, i, m, n);
+        else if(grid[i][n-1]=='O')
+            dfs(grid, i, m-1, m, n);
+    }
+    for(int i=0;i<n;i++) {
+        if(grid[0][i]=='O')
+            dfs(grid, 0, i, m, n);
+        else if(grid[m-1][i]=='O')
+            dfs(grid, m-1, i, m, n);
+    }
+    for(int i=0;i<m*n;i++) {
+        int r=i/n, c=i%n;
+        if(grid[r][c]=='*')
+            grid[r][c]='O';
+        else if(grid[r][c]=='O')
+            grid[r][c]='X';
+    }
+    for(char[] row:grid)
+        IO.println(Arrays.toString(row));
+
+}
