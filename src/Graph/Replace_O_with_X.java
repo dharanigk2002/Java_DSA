@@ -16,23 +16,22 @@ void dfs(char[][] grid, int i, int j, int m, int n) {
 
 void main() {
     char[][] grid = {
-            {'X', 'X', 'X', 'X'},
-            {'X', 'O', 'X', 'X'},
-            {'X', 'O', 'O', 'X'},
-            {'X', 'O', 'X', 'X'},
-            {'X', 'X', 'O', 'O'}
+            {'O', 'O', 'X', 'O', 'X'},
+            {'O', 'X', 'X', 'X', 'O'},
+            {'X', 'X', 'X', 'O', 'X'},
+            {'O', 'O', 'X', 'O', 'X'},
     };
     int m=grid.length, n=grid[0].length;
     for(int i=0;i<m;i++) {
         if(grid[i][0]=='O')
-            dfs(grid, 0, i, m, n);
-        else if(grid[i][n-1]=='O')
-            dfs(grid, i, m-1, m, n);
+            dfs(grid, i, 0, m, n);
+        if(grid[i][n-1]=='O')
+            dfs(grid, i, n-1, m, n);
     }
     for(int i=0;i<n;i++) {
         if(grid[0][i]=='O')
             dfs(grid, 0, i, m, n);
-        else if(grid[m-1][i]=='O')
+        if(grid[m-1][i]=='O')
             dfs(grid, m-1, i, m, n);
     }
     for(int i=0;i<m*n;i++) {
