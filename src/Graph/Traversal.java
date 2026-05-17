@@ -48,7 +48,7 @@ void main() {
     int V=8;
     List<List<Integer>> adj=new ArrayList<>();
     int[][] graph={
-            {1, 2}, {1, 6}, {2, 3}, {2, 4}, {6, 7}, {6, 8}, {4, 5}, {7, 5}
+            {1, 2}, {1, 3}, {2, 5}, {6, 2}, {3, 4}, {7, 3}, {4, 8}, {7, 8}
     };
     for(int i=0;i<=V;i++)
         adj.add(new ArrayList<>());
