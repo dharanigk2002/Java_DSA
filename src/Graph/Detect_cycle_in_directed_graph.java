@@ -1,7 +1,7 @@
 boolean dfs(List<List<Integer>> adj, int node, boolean[] visited, boolean[] path) {
     visited[node]=path[node]=true;
     for(int neigh:adj.get(node))
-        if(!visited[neigh] && dfs(adj, neigh, visited, path) || visited[neigh] && path[neigh])
+        if(!visited[neigh] && dfs(adj, neigh, visited, path) || path[neigh])
             return true;
     return path[node]=false;
 }
