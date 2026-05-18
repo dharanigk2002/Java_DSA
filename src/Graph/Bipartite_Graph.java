@@ -12,6 +12,13 @@ Return true if and only if it is bipartite.
 https://leetcode.com/problems/is-graph-bipartite/description/
 */
 
+/*
+What is bi-partite graph?
+A bipartite graph is a graph whose vertices can be divided into two disjoint sets U and V such that every edge connects a vertex in
+U to one in V. No edges exist between vertices within the same set, making it a "two-part" structure.
+A key property is that they contain no odd-length cycles.
+*/
+
 public boolean isBipartite(int[][] graph) {
     int n=graph.length;
     int[] color=new int[n];
