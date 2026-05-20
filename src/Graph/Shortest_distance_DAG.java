@@ -13,7 +13,7 @@ void dfs(List<List<int[]>> adj, int src, boolean[] visited, Stack<Integer> topo)
 }
 
 void main() {
-    final int INF=(int)1e7;
+    final int INF=Integer.MAX_VALUE;
     int V = 6;
     int[][] edges = {{0,1,2}, {0,4,1}, {4,5,4}, {4,2,2}, {1,2,3}, {2,3,6}, {5,3,1}};
     // edge[0] -> from node, edge[1] -> to node, edge[2] -> weight
@@ -35,7 +35,8 @@ void main() {
     while(!topo.isEmpty()) {
         int node=topo.pop();
         for(int[] nei:adj.get(node))
-            dist[nei[0]]=Math.min(dist[nei[0]], dist[node]+nei[1]);
+            if(dist[nei[0]] > dist[node]+nei[1])
+                dist[nei[0]]=dist[node]+nei[1];
     }
     for(int i=0;i<V;i++)
         if(dist[i]==INF)
