@@ -43,7 +43,6 @@ int countConnected(int V, ArrayList<ArrayList<Integer>> edges) {
     return count;
 }
 */
- */
 // Kruskal's algorithm
 void main() {
     int[][] edges = {{5, 4, 9}, {5, 1, 4}, {4, 1, 1}, {4, 3, 5}, {4, 2, 3}, {1, 2, 2}, {2, 3, 3}, {3, 6, 8}, {2, 6, 7}};
