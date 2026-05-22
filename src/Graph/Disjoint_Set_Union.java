@@ -30,6 +30,20 @@ class DSU {
         return parent[node]=findParent(parent[node]);
     }
 }
+// DSU helpful in finding number of connected components
+/*
+int countConnected(int V, ArrayList<ArrayList<Integer>> edges) {
+    DSU ds=new DSU(V);
+    int count=0;
+    for(ArrayList<Integer> edge:edges)
+        ds.union(edge.get(0), edge.get(1));
+    for(int i=0;i<V;i++)
+        if(i==ds.findParent(i))
+            count++;
+    return count;
+}
+*/
+ */
 // Kruskal's algorithm
 void main() {
     int[][] edges = {{5, 4, 9}, {5, 1, 4}, {4, 1, 1}, {4, 3, 5}, {4, 2, 3}, {1, 2, 2}, {2, 3, 3}, {3, 6, 8}, {2, 6, 7}};
