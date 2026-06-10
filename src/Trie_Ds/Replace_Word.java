@@ -7,6 +7,8 @@ Given a dictionary consisting of many roots and a sentence consisting of words s
 replace all the derivatives in the sentence with the root forming it. If a derivative can be replaced by more than one root, replace it with the root that has the shortest length.
 
 Return the sentence after the replacement.
+
+https://leetcode.com/problems/replace-words/description/
 */
 
 private Node root=null;
