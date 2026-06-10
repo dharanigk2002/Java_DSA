@@ -1,3 +1,5 @@
+package Tree;
+
 /**
  * ============================================================
  *  AVL TREE — Complete Java Implementation with Intuition
@@ -28,7 +30,7 @@
  *    If BF < -1 (right-heavy) and BF(right) <= 0 → RR → rotateLeft
  *    If BF < -1 (right-heavy) and BF(right) >  0 → RL → rotateRight(right), rotateLeft(root)
  */
-public class AVLTree {
+class AVLTree_claude {
 
     // ─────────────────────────────────────────────
     //  NODE
@@ -336,7 +338,7 @@ public class AVLTree {
     // ─────────────────────────────────────────────
 
     public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+        AVLTree_claude tree = new AVLTree_claude();
 
         System.out.println("══════════════════════════════════════════════");
         System.out.println("  Demo 1 — LL rotation (right-right insert)");
@@ -350,7 +352,7 @@ public class AVLTree {
         System.out.println("\n══════════════════════════════════════════════");
         System.out.println("  Demo 2 — LR rotation");
         System.out.println("══════════════════════════════════════════════");
-        AVLTree t2 = new AVLTree();
+        AVLTree_claude t2 = new AVLTree_claude();
         // Inserting 30, 10, 20 → bf(30)=+2, bf(10)=-1 (<0) → LR double rotate.
         t2.insert(30); t2.insert(10); t2.insert(20);
         t2.printTree();
@@ -358,7 +360,7 @@ public class AVLTree {
         System.out.println("\n══════════════════════════════════════════════");
         System.out.println("  Demo 3 — Full build + operations");
         System.out.println("══════════════════════════════════════════════");
-        AVLTree t3 = new AVLTree();
+        AVLTree_claude t3 = new AVLTree_claude();
         int[] values = {50, 30, 70, 20, 40, 60, 80, 10, 25};
         for (int v : values) t3.insert(v);
 
