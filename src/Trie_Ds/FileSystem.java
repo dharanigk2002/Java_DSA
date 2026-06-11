@@ -1,3 +1,105 @@
+/*
+Directory Structure Management
+
+You are given a directory structure represented as an N-ary tree, where:
+
+Each node represents a directory.
+A directory can have any number of child directories.
+Child directory names under the same parent are unique.
+The root directory is provided in the input.
+
+You must process a sequence of commands on this directory tree.
+
+Operations
+1. countDescendants(path)
+
+Returns the number of descendants of the directory specified by path.
+
+A descendant is any directory present in the subtree excluding the directory itself.
+
+root
+├── a
+│   ├── d
+│   └── e
+├── b
+└── c
+    ├── f
+    └── g
+
+countDescendants root      => 7
+countDescendants root/a    => 2
+countDescendants root/b    => 0
+countDescendants root/c    => 2
+countDescendants root/a/d  => 0
+
+2. cutPaste(src, dest)
+
+Move the directory at path src from its current parent and attach it as a child of the directory at path dest.
+
+Example
+
+Before:
+root
+├── a
+│   ├── d
+│   └── e
+├── b
+└── c
+    ├── f
+    └── g
+cutPaste root/a root/c
+
+root
+├── b
+└── c
+    ├── a
+    │   ├── d
+    │   └── e
+    ├── f
+    └── g
+
+3. copyPaste(src, dest)
+
+Create a deep copy of the directory at path src and attach the copied subtree as a child of the directory at path dest.
+
+Example
+
+Before:
+root
+├── a
+│   ├── d
+│   └── e
+├── b
+└── c
+    ├── f
+    └── g
+
+copyPaste root/a root/c
+
+root
+├── a
+│   ├── d
+│   └── e
+├── b
+└── c
+    ├── a
+    │   ├── d
+    │   └── e
+    ├── f
+    └── g
+
+
+
+The intended solution uses:
+
+N-ary Tree
+HashMap for children lookup
+Parent pointers
+Cached descendant counts (subtree sizes)
+
+to support efficient path lookup, move, and copy operations.
+*/
+
 class Node {
     String name;
     Node parent;
