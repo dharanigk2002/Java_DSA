@@ -7,7 +7,9 @@ import java.util.*;
 For each wordsQuery[i], you need to find a string from wordsContainer that has the longest common suffix with wordsQuery[i]. If there are two or more strings in wordsContainer that share the longest common suffix, find the string that is the smallest in length. If there are two or more such strings that have the same smallest length, find the one that occurred earlier in wordsContainer.
 
 Return an array of integers ans, where ans[i] is the index of the string in wordsContainer that has the longest common suffix with wordsQuery[i].
-*/
+
+https://leetcode.com/problems/longest-common-suffix-queries/description/
+* */
 class Trie {
     private Trie[] nodes;
     private int len, id;

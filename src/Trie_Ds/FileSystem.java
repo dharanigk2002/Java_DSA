@@ -211,9 +211,7 @@ boolean canPaste(Node src, Node dest) {
         return false;
     if(isAncestor(src, dest))
         return false;
-    if(dest.children.containsKey(src.name))
-        return false;
-    return true;
+    return !dest.children.containsKey(src.name);
 }
 
 Node cloneTree(Node node) {
