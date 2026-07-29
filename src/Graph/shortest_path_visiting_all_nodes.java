@@ -5,7 +5,7 @@ You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You 
 
 Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
 
-https://leetcode.com/problems/shortest-path-visiting-all-nodes/description/
+https://leetcode.com/problems/shortest-path-visiting-all-nodes/description
 */
 public int shortestPathLength(int[][] graph) {
     int n=graph.length;
