@@ -9,7 +9,7 @@ You can swim from a square to another 4-directionally adjacent square if and onl
 
 Return the minimum time until you can reach the bottom right square (n - 1, n - 1) if you start at the top left square (0, 0).
 
-https://leetcode.com/problems/swim-in-rising-water/description/
+https://leetcode.com/problems/swim-in-rising-water/description
 */
 
 private static final int[][] DIRS={{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
